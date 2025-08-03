@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhea Shah | Machine Learning Engineer Portfolio</title>
+    <!-- Import Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --secondary: #8b5cf6;
+            --accent: #ec4899;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white bg-opacity-80 backdrop-blur-md z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center" style="padding-right: 2rem;">
+            <a href="index.html" class="text-2xl font-bold gradient-text">Rhea Shah</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#experience" class="text-gray-700 hover:text-purple-600 transition">Experience</a>
+                <a href="#contact" class="text-gray-700 hover:text-purple-600 transition">Contact</a>
+            </div>
+            <button class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Spline 3D Component -->
+    <section class="min-h-screen flex items-center pt-20">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <h1 class="text-5xl md:text-6xl font-bold text-gray-800 leading-tight">
+                    Hello World, 
+                    <br> I'm <span class = "gradient-text">Rhea Shah</span>
+                </h1>
+                <p class="text-xl text-gray-600">
+                    Studying computer science at University of Illinois at Urbana-Champaign
+                    <br> <br>
+                    Passionate about building AI/ML solutions to real-world problems
+                    <br> <br>
+                    Interact with my virtual desk or continue scrolling to learn more about me
+                </p>
+                <div class="flex space-x-4 pt-4">
+                    <a href="https://github.com/Rhea-Shah23" target="_blank" class="text-gray-700 hover:text-purple-600 transition">
+                        <img src="github.png" alt="GitHub" class="w-8 h-8" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/rheatshah" target="_blank" class="text-gray-700 hover:text-purple-600 transition">
+                        <img src="linkedin.png" alt="LinkedIn" class="w-8 h-8" />
+                    </a>
+                    <a href="mailto:rheats2@illinois.edu" class="text-gray-700 hover:text-purple-600 transition">
+                        <img src="email.png" alt="Email" class="w-8 h-8" />
+                    </a>
+                </div>
+            </div>
+            <div class="relative w-30 h-30 rounded-full overflow-hidden">
+                <img src="headshot.jpg" alt="headshot" class="w-30 h-30 object-cover" />
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">
+                Professional <span class="gradient-text">Experience</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Experience Item 1 -->
+                <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 shadow-md hover:shadow-xl transition">
+                    <div class="flex items-center mb-4">
+                        <div>
+                            <h3 class="font-bold text-lg">2024 NeurIPS Spotlight Project: Advancing Diabetic Retinopathy Diagnosis</h3>
+                            <p class="text-purple-600">2023 - 2024</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">
+                        Published research on using a novel vision transformer architecture to better diagnose diabetic retinopathy. Outperformed all previous benchmarks, including GoogleAutoML, setting a new state-of-the-art benchmark on the RetinaMNIST dataset.
+                    </p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Research</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Transformers</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Healthcare</span>
+                    </div>
+                    <div class="mt-4">
+                        <a href="https://github.com/Rhea-Shah23/DiabeticRetinopathyResearch" target="_blank" class="text-purple-600 hover:text-purple-800 transition">
+                            <img src="github.png" alt="GitHub Project" class="w-6 h-6 inline" />
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Experience Item 2 -->
+                <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 shadow-md hover:shadow-xl transition">
+                    <div class="flex items-center mb-4">
+                        <div>
+                            <h3 class="font-bold text-lg">Computer Vision Research Intern</h3>
+                            <p class="text-purple-600">MIT Lincoln Laboratory • 2024 - 2025</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">
+                        Engineered a deep learning pipeline to detect failures in additive manufacturing using a curated 10K image subset of the CAXTON dataset. Resolved data issues and performed model analysis to achieve a high accuracy
+                    </p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Data Curation</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">PyTorch</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Deep Learning</span>
+                    </div>
+                    <div class="mt-4">
+                        <a href="https://github.com/Rhea-Shah23/3DPrintingFailure" target="_blank" class="text-purple-600 hover:text-purple-800 transition">
+                            <img src="github.png" alt="GitHub Project" class="w-6 h-6 inline" />
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Experience Item 3 -->
+                <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 shadow-md hover:shadow-xl transition">
+                    <div class="flex items-center mb-4">
+                        <div>
+                            <h3 class="font-bold text-lg">NLP Research Intern</h3>
+                            <p class="text-purple-600">MIT Lincoln Laboratory • 2024</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">
+                        Built a robust fake news classifier by fine-tuning BERT and using integrated SVMs. Benchmarked CNNs, RNNs, and transformers to optimize performance and generalize misinformation detection across sources
+                    </p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">NLP</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Hugging Face</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Model Optimization</span>
+                    </div>
+                </div>
+
+                <!-- Experience Item 4 -->
+                <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 shadow-md hover:shadow-xl transition">
+                    <div class="flex items-center mb-4">
+                        <div>
+                            <h3 class="font-bold text-lg">Computation Immunology Intern</h3>
+                            <p class="text-purple-600">Northwestern University • 2023</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">
+                        Preprocessed and visualized single-cell RNA sequence data in R to identify biomarkers for early diagnosis of GERD and systemic sclerosis. Trained and optimized ML models (SVMs, CNN, Random Forest, Logistic Regression) on high-dimensional biomedical data. 
+                    </p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">R</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">High-Dimensional Data</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Feature Engineering</span>
+                    </div>
+                </div>
+
+                <!-- Experience Item 5 -->
+                <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 shadow-md hover:shadow-xl transition">
+                    <div class="flex items-center mb-4">
+                        <div>
+                            <h3 class="font-bold text-lg"> Distributed Real-Time Risk Engine for Crypto Derivatives</h3>
+                            <p class="text-purple-600">2025</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">
+                        Built a real-time risk engine in Rust to compute PnL, exposure, and liquidation metrics for high-frequency crypto derivatives trading. to compute PnL, exposure, and liquidation metrics for high-frequency crypto derivatives trading
+                    </p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">FinTech</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Latency Processing</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Rust</span>
+                    </div>
+                    <div class="mt-4">
+                        <a href="https://github.com/Rhea-Shah23/CryptoRiskEngine" target="_blank" class="text-purple-600 hover:text-purple-800 transition">
+                            <img src="github.png" alt="GitHub Project" class="w-6 h-6 inline" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 shadow-md">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">
+                Let's <span class="gradient-text">Connect</span>
+            </h2>
+            
+            <div class="max-w-3xl mx-auto bg-white p-8 rounded-2xl shadow">
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block mb-2 font-medium">Name</label>
+                        <input type="text" id="name" class="w-full px-4 py-3 bg-white bg-opacity-10 border border-gray border-opacity-20 rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50" placeholder="Your name">
+                    </div>
+                    <div>
+                        <label for="email" class="block mb-2 font-medium">Email</label>
+                        <input type="email" id="email" class="w-full px-4 py-3 bg-white bg-opacity-10 border border-gray border-opacity-20 rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50" placeholder="your.email@example.com">
+                    </div>
+                    <div>
+                        <label for="subject" class="block mb-2 font-medium">Subject</label>
+                        <input type="text" id="subject" class="w-full px-4 py-3 bg-white bg-opacity-10 border border-gray border-opacity-20 rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50" placeholder="What's this about?">
+                    </div>
+                    <div>
+                        <label for="message" class="block mb-2 font-medium">Message</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-3 bg-white bg-opacity-10 border border-gray border-opacity-20 rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50" placeholder="Your message..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full px-6 py-3 bg-gray text-purple-600 font-bold rounded-lg hover:bg-gray-100 transition">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript for Spline and animations -->
+    <script>
+            
+            // Smooth scroll for navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Mobile menu toggle would go here
+    </script>
+</body>
+</html>
