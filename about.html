@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Rhea Shah</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <!-- Import Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --secondary: #8b5cf6;
+            --accent: #ec4899;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Custom styles for the creative hobby sections */
+        .hobby-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .hobby-section.reverse {
+            flex-direction: column-reverse;
+        }
+
+        @media (min-width: 768px) { /* Medium screens and up */
+            .hobby-section {
+                flex-direction: row;
+                text-align: left;
+            }
+            .hobby-section.reverse {
+                flex-direction: row-reverse;
+            }
+            .hobby-section .hobby-content,
+            .hobby-section .hobby-image {
+                flex: 1;
+            }
+            .hobby-section .hobby-content {
+                padding-right: 2rem;
+            }
+            .hobby-section.reverse .hobby-content {
+                padding-left: 2rem;
+                padding-right: 0;
+            }
+        }
+
+        .hobby-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 1rem; /* Rounded corners for images */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white bg-opacity-80 backdrop-blur-md z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center" style="padding-right: 2rem;">
+            <a href="index.html" class="text-2xl font-bold gradient-text">Rhea Shah</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html#experience" class="text-gray-700 hover:text-purple-600 transition">Experience</a>
+                <a href="index.html#contact" class="text-gray-700 hover:text-purple-600 transition">Contact</a>
+                <a href="https://drive.google.com/file/d/1R7FBDo1zrX-knA3-9c4slseg2ruUPOpF/view?usp=sharing" class="text-gray-700 hover:text-purple-600 transition">Resume</a>
+                <a href="about.html" class="text-purple-600 hover:text-purple-600 transition">About Me</a>
+            </div>
+            <button class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section - About Me -->
+    <section class="min-h-screen flex items-center pt-20">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <h1 class="text-5xl md:text-6xl font-bold text-gray-800 leading-tight">
+                    More <span class="gradient-text">About Me</span>
+                </h1>
+                <p class="text-xl text-gray-600">
+                    I have a passion for exploring the world, staying active, and 3D printing!
+                </p>
+            </div>
+            <div class="relative w-full h-full flex justify-center items-center">
+                <img src="headshot2.JPG" alt="Rhea Shah" class="rounded-lg shadow-lg max-w-full h-auto" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">
+                My <span class="gradient-text">Hobbies</span>
+            </h2>
+            
+            <!-- 3D Printing -->
+            <div class="hobby-section md:flex items-center gap-12 mb-16">
+                <div class="hobby-image mb-8 md:mb-0 md:w-1/2">
+                    <img src="3dprint.jpg" alt="3D Printer" class="w-full h-auto object-cover"/>
+                </div>
+                <div class="hobby-content md:w-1/2 space-y-4">
+                    <h3 class="font-bold text-3xl text-gray-800">
+                        3D Printing 
+                    </h3>
+                    <p class="text-gray-700 text-lg">
+                        My 3D printing journey starting during the pandemic where I created 3D printed personal protective equipment for healthcare workers. Now, I love to create custom trinkets and household tools! My most recent project was building a sign for my local yoga center!
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">CAD</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Prototyping</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Innovation</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Additive Manufacturing</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Athletics -->
+            <div class="hobby-section reverse md:flex items-center gap-12 mb-16">
+                <div class="hobby-image mb-8 md:mb-0 md:w-1/2">
+                    <img src="badminton.jpg" alt="Sectional Championship Picture" class="w-full h-auto object-cover"/>
+                </div>
+                <div class="hobby-content md:w-1/2 space-y-4">
+                    <h3 class="font-bold text-3xl text-gray-800">
+                        Fitness </h3>
+                    <p class="text-gray-700 text-lg">
+                        From a young age, I've loved playing sports! In high school I found balance by playing basketball and badminton. I've also done some recreational running, swimming, and tennis. Now, I'm training for my first triathlon, wish me luck!
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Running</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Swimming</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Tennis</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Well-being</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hiking -->
+            <div class="hobby-section md:flex items-center gap-12 mb-16">
+                <div class="hobby-image mb-8 md:mb-0 md:w-1/2">
+                    <img src="kili.JPG" alt="Mt. Kilimanjaro Summit" class="w-full h-auto object-cover"/>
+                </div>
+                <div class="hobby-content md:w-1/2 space-y-4">
+                    <h3 class="font-bold text-3xl text-gray-800">
+                        Hiking
+                    </h3>
+                    <p class="text-gray-700 text-lg">
+                        My favorite way to be active and enjoy the outdoors is through hiking and trekking! My most recent trek was the 5-day Salkantay Trek in Peru which culminates in seeing Machu Picchu! My most memorable trek was the 7-day Mt. Kilimanjaro summit! For me, hiking is the best way to disconnect and challenge myself physically and mentally 
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Adventure</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Hiking</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Nature</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Exploration</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Travelling -->
+            <div class="hobby-section reverse md:flex items-center gap-12 mb-16">
+                <div class="hobby-image mb-8 md:mb-0 md:w-1/2">
+                    <img src="norway.JPG" alt="Norway Picture" class="w-full h-auto object-cover"/>
+                </div>
+                <div class="hobby-content md:w-1/2 space-y-4">
+                    <h3 class="font-bold text-3xl text-gray-800">
+                        Travelling
+                    </h3>
+                    <p class="text-gray-700 text-lg">
+                        While not all places offer beautiful treks, I love to travel and immerse myself in the cultures of different countries. For me, the most fascinating part is speaking with locals and gaining their perspective on life. My most recent travel was to Norway, where my family and I saw beautiful fjords!
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Travel</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Culture</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Nature</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Exploration</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- JavaScript for smooth scroll -->
+    <script>
+            // Smooth scroll for navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+    </script>
+</body>
+</html>
