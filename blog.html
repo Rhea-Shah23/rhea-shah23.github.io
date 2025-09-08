@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhea Shah's Blog</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <!-- Import Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="blog.css"> <!-- Link to new blog-specific CSS -->
+    <style>
+        :root {
+            --primary: #6366f1;
+            --secondary: #8b5cf6;
+            --accent: #ec4899;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 font-sans">
+    <!-- Navigation (Copy from index.html, add blog link) -->
+    <nav class="fixed w-full bg-white bg-opacity-80 backdrop-blur-md z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center" style="padding-right: 2rem;">
+            <a href="index.html" class="text-2xl font-bold gradient-text">Rhea Shah</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html#experience" class="text-gray-700 hover:text-purple-600 transition">Experience</a>
+                <a href="index.html#contact" class="text-gray-700 hover:text-purple-600 transition">Contact</a>
+                <a href="https://drive.google.com/file/d/1R7FBDo1zrX-knA3-9c4slseg2ruUPOpF/view?usp=sharing" class="text-gray-700 hover:text-purple-600 transition">Resume</a>
+                <a href="about.html" class="text-gray-700 hover:text-purple-600 transition">About Me</a>
+                <a href="blog.html" class="text-purple-600 hover:text-purple-600 transition">Blog</a> <!-- New Blog Link -->
+            </div>
+            <button class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Blog Hero Section -->
+    <section class="min-h-screen flex items-center pt-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold text-gray-800 leading-tight mb-4">
+                My <span class="gradient-text">Blog</span>
+            </h1>
+            <p class="text-xl text-gray-600">
+                Welcome to my blog! I'm aiming to publish biweekly blogs on the "breadcrumbs" of my life and monthly blogs on more intriguing thoughts and reflections. Continue scrolling to see me document my personal experiences!
+            </p>
+        </div>
+    </section>
+
+    <!-- Blog Posts Listing -->
+    <section id="blog-posts" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">
+                Latest <span class="gradient-text">Articles</span>
+            </h2>
+            
+            <div class="space-y-12">
+                <!-- Blog Post 1 (Newest) -->
+                <a href="aug25_breadcrumbs.html" class="block bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+                    <h3 class="font-bold text-2xl text-gray-800 mb-2"> August 2025 Breadcrumbs: The Start</h3>
+                    <p class="text-purple-600 text-sm mb-4">October 26, 2024</p>
+                    <p class="text-gray-700">
+                        First blog post! First breadcrumb edition! Read it to learn more about my plan for this blog and some smaller moments that have brought me joy in a time of constant movement! 
+                    </p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Breadcrumbs</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+
+</body>
+</html>
