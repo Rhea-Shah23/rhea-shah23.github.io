@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos - Rhea Shah</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #f5f5f5;
+            color: #2c2c2c;
+            line-height: 1.6;
+            padding: 40px 20px;
+            font-weight: 550;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #d0d0d0;
+            margin-bottom: 60px;
+        }
+
+        .back-link {
+            color: #2c2c2c;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #666;
+        }
+
+        .page-title {
+            font-size: 32px;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .photo-item {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .photo-container {
+            width: 100%;
+            aspect-ratio: 4/3;
+            border: 2px solid #d0d0d0;
+            background-color: #e8e8e8;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-container:hover {
+            transform: scale(1.02);
+        }
+
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .photo-caption {
+            font-size: 14px;
+            color: #666;
+            padding: 0 5px;
+        }
+
+        .photo-location {
+            font-size: 12px;
+            color: #999;
+            padding: 0 5px;
+        }
+
+        .placeholder-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            color: #999;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .photo-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .page-title {
+                font-size: 24px;
+            }
+
+            .header {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="page-title">//photos</div>
+            <a href="index.html" class="back-link">← back to home</a>
+        </div>
+
+        <div class="photo-grid">
+            <!-- Photo 1 -->
+            <div class="photo-item">
+                <div class="photo-container">
+                    <!-- Replace 'photo1.jpg' with your actual image path -->
+                    <!-- <img src="photo1.jpg" alt="Photo description"> -->
+                    <div class="placeholder-text">photo 1</div>
+                </div>
+                <div class="photo-caption">// add your caption here</div>
+                <div class="photo-location">location, date</div>
+            </div>
+
+            <!-- Photo 2 -->
+            <div class="photo-item">
+                <div class="photo-container">
+                    <!-- <img src="photo2.jpg" alt="Photo description"> -->
+                    <div class="placeholder-text">photo 2</div>
+                </div>
+                <div class="photo-caption">// add your caption here</div>
+                <div class="photo-location">location, date</div>
+            </div>
+
+            <!-- Photo 3 -->
+            <div class="photo-item">
+                <div class="photo-container">
+                    <!-- <img src="photo3.jpg" alt="Photo description"> -->
+                    <div class="placeholder-text">photo 3</div>
+                </div>
+                <div class="photo-caption">// add your caption here</div>
+                <div class="photo-location">location, date</div>
+            </div>
+
+            <!-- Photo 4 -->
+            <div class="photo-item">
+                <div class="photo-container">
+                    <!-- <img src="photo4.jpg" alt="Photo description"> -->
+                    <div class="placeholder-text">photo 4</div>
+                </div>
+                <div class="photo-caption">// add your caption here</div>
+                <div class="photo-location">location, date</div>
+            </div>
+
+            <!-- Photo 5 -->
+            <div class="photo-item">
+                <div class="photo-container">
+                    <!-- <img src="photo5.jpg" alt="Photo description"> -->
+                    <div class="placeholder-text">photo 5</div>
+                </div>
+                <div class="photo-caption">// add your caption here</div>
+                <div class="photo-location">location, date</div>
+            </div>
+
+            <!-- Photo 6 -->
+            <div class="photo-item">
+                <div class="photo-container">
+                    <!-- <img src="photo6.jpg" alt="Photo description"> -->
+                    <div class="placeholder-text">photo 6</div>
+                </div>
+                <div class="photo-caption">// add your caption here</div>
+                <div class="photo-location">location, date</div>
+            </div>
+
+            <!-- Add more photos as needed by copying the photo-item structure -->
+        </div>
+    </div>
+</body>
+</html>
