@@ -3,287 +3,356 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rhea Shah Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="favicon.png">
-    <!-- Import Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Rhea Shah - Machine Learning Engineer</title>
     <style>
-        :root {
-            --primary: #6366f1;
-            --secondary: #8b5cf6;
-            --accent: #ec4899;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #f5f5f5;
+            color: #2c2c2c;
+            line-height: 1.6;
+            padding: 40px 20px;
+            font-weight: 550; 
         }
         
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
+        a {
+            color: #2c2c2c;
+            text-decoration: none;
+            transition: color 0.3s; 
+        }
+
+        a:hover {
+            color: #666;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header-links {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px 0;
+            border-bottom: 1px solid #d0d0d0;
+            margin-bottom: 40px;
+            font-size: 14px;
+        }
+
+        .header-links a {
+            color: #2c2c2c;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .header-links a:hover {
+            color: #666;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+            border: 3px solid #d0d0d0;
+        }
+
+        .profile-info h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .profile-info .subtitle {
+            color: #666;
+            font-size: 18px;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 3px;
+            height: 1em;
+            background-color: #2c2c2c;
+            margin-left: 5px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 49% {
+                opacity: 1;
             }
-            50% {
-                transform: translateY(-20px);
+            50%, 100% {
+                opacity: 0;
             }
         }
-        
-        .floating {
-            animation: float 6s ease-in-out infinite;
+
+        section {
+            margin-bottom: 30px;
         }
-        
-        .gradient-text {
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+
+        .section-title {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 30px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #d0d0d0;
+        }
+
+        .about-text {
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        .job {
+            margin-bottom: 50px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+            flex-direction: row-reverse;
+        }
+
+        .job-date {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .job-title {
+            border: 1px solid #2c2c2c;
+            padding: 8px 16px;
+            display: inline-block;
+        }
+
+        .job-title .company {
+            font-weight: bold;
+        }
+
+        .job-title .role {
+            color: #666;
+        }
+
+        .job-description {
+            margin-left: 20px;
+        }
+
+        .job-description li {
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        .tech-stack {
+            color: #666;
+            font-size: 14px;
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        .projects-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .project-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 20px;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .project-name {
+            font-weight: bold;
+        }
+
+        .project-tag {
+            border: 1px solid #2c2c2c;
+            padding: 6px 16px;
+            text-align: center;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 768px) {
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-info h1 {
+                font-size: 32px;
+            }
+
+            .header-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .job-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .project-row {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .project-tag {
+                width: fit-content;
+            }
         }
     </style>
 </head>
-<body class="bg-gradient-to-br from-gray-50 to-gray-100 font-sans">
-    <!-- Navigation -->
-    <nav class="fixed w-full bg-white bg-opacity-80 backdrop-blur-md z-50 shadow-sm">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center" style="padding-right: 2rem;">
-            <a href="index.html" class="text-2xl font-bold gradient-text">Rhea Shah</a>
-            <div class="hidden md:flex space-x-8">
-                <a href="#experience" class="text-gray-700 hover:text-purple-600 transition">Experience</a>
-                <a href="#contact" class="text-gray-700 hover:text-purple-600 transition">Contact</a>
-                <a href="https://drive.google.com/file/d/1R7FBDo1zrX-knA3-9c4slseg2ruUPOpF/view?usp=sharing" class="text-gray-700 hover:text-purple-600 transition">Resume</a>
-                <a href="about.html" class="text-gray-700 hover:text-purple-600 transition">About Me</a>
-                <a href="blog.html" class="text-gray-700 hover:text-purple-600 transition">Blog</a>
-            </div>
-            <button class="md:hidden">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
+<body>
+    <div class="container">
+        <div class="header-links">
+            <div>//email: <a href="mailto:rheats2@illinois.edu">rheats2@illinois.edu</a></div>
+            <div>//linkedin: <a href="https://linkedin.com/in/rheatshah" target="_blank">linkedin.com/in/rheatshah</a></div>
+            <div>//github: <a href="https://github.com/Rhea-Shah23" target="_blank">github.com/Rhea-Shah23</a></div>
+            <div>//photos: <a href="photos.html">view photos</a></div>
         </div>
-    </nav>
 
-    <!-- Hero Section with Spline 3D Component -->
-    <section class="min-h-screen flex items-center pt-20">
-        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-6">
-                <h1 class="text-5xl md:text-6xl font-bold text-gray-800 leading-tight">
-                    Hello World, 
-                    <br> I'm <span class = "gradient-text">Rhea Shah</span>
-                </h1>
-                <p class="text-xl text-gray-600">
-                    Studying computer science at University of Illinois at Urbana-Champaign
-                    <br> <br>
-                    Passionate about building AI/ML solutions to real-world problems
-                    <br> <br>
-                    Continue scrolling to learn more about me!
-                </p>
-                <div class="flex space-x-4 pt-4">
-                    <a href="https://github.com/Rhea-Shah23" target="_blank" class="text-gray-700 hover:text-purple-600 transition">
-                        <img src="github.png" alt="GitHub" class="w-8 h-8" />
-                    </a>
-                    <a href="https://www.linkedin.com/in/rheatshah" target="_blank" class="text-gray-700 hover:text-purple-600 transition">
-                        <img src="linkedin.png" alt="LinkedIn" class="w-8 h-8" />
-                    </a>
-                    <a href="mailto:rheats2@illinois.edu" class="text-gray-700 hover:text-purple-600 transition">
-                        <img src="email.png" alt="Email" class="w-8 h-8" />
-                    </a>
-                </div>
+        <div class="profile-section">
+            <div class="profile-image"></div>
+            <div class="profile-info">
+                <h1>&lt;Rhea Shah&gt;<span class="cursor"></span></h1>
+                <div class="subtitle">//CS @ UIUC</div>
+                <div class="subtitle">//Machine Learning Engineer</div>
             </div>
-            <div class="relative w-30 h-30 rounded-full overflow-hidden">
-                <img src="headshot.jpg" alt="headshot" class="w-30 h-30 object-cover" />
-            </div>
-
         </div>
-    </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">
-                Professional <span class="gradient-text">Experience</span>
-            </h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Experience Item 1 -->
-                <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 shadow-md hover:shadow-xl transition">
-                    <div class="flex items-center mb-4">
-                        <div>
-                            <h3 class="font-bold text-lg">2024 NeurIPS Spotlight Project: Advancing Diabetic Retinopathy Diagnosis</h3>
-                            <p class="text-purple-600">2023 - 2024</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700">
-                        Published research on using a novel vision transformer architecture to better diagnose diabetic retinopathy. Outperformed all previous benchmarks, including GoogleAutoML, setting a new state-of-the-art benchmark on the RetinaMNIST dataset.
-                    </p>
-                    <div class="mt-4 flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Research</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Transformers</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Healthcare</span>
-                    </div>
-                    <div class="mt-4">
-                        <a href="https://github.com/Rhea-Shah23/DiabeticRetinopathyResearch" target="_blank" class="text-purple-600 hover:text-purple-800 transition">
-                            <img src="github.png" alt="GitHub Project" class="w-6 h-6 inline" />
-                        </a>
-                    </div>
-                </div>
+        <section>
+            <div class="section-title">//about</div>
+            <div class="about-text">
+                Hello World, I'm Rhea Shah! <br><br>
+
+                I'm studying computer science at the university of illinois urbana-champaign. I'm passionate about all things machine learning, whether that be computer vision, natural language, agents, or reinforcement learning, i love learning and applying different concepts. I'm also super passionate about building, I love building side projects and useful tools for myself and peers! <br><br>
                 
-                <!-- Experience Item 2 -->
-                <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 shadow-md hover:shadow-xl transition">
-                    <div class="flex items-center mb-4">
-                        <div>
-                            <h3 class="font-bold text-lg">Computer Vision Research Intern</h3>
-                            <p class="text-purple-600">MIT Lincoln Laboratory • 2024 - 2025</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700">
-                        Engineered a deep learning pipeline to detect failures in additive manufacturing using a curated 10K image subset of the CAXTON dataset. Resolved data issues and performed model analysis to achieve a high accuracy
-                    </p>
-                    <div class="mt-4 flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Data Curation</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">PyTorch</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Deep Learning</span>
-                    </div>
-                    <div class="mt-4">
-                        <a href="https://github.com/Rhea-Shah23/3DPrintingFailure" target="_blank" class="text-purple-600 hover:text-purple-800 transition">
-                            <img src="github.png" alt="GitHub Project" class="w-6 h-6 inline" />
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Experience Item 3 -->
-                <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 shadow-md hover:shadow-xl transition">
-                    <div class="flex items-center mb-4">
-                        <div>
-                            <h3 class="font-bold text-lg">NLP Research Intern</h3>
-                            <p class="text-purple-600">MIT Lincoln Laboratory • 2024</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700">
-                        Built a robust fake news classifier by fine-tuning BERT and using integrated SVMs. Benchmarked CNNs, RNNs, and transformers to optimize performance and generalize misinformation detection across sources
-                    </p>
-                    <div class="mt-4 flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">NLP</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Hugging Face</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Model Optimization</span>
-                    </div>
-                </div>
-
-                <!-- Experience Item 4 -->
-                <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 shadow-md hover:shadow-xl transition">
-                    <div class="flex items-center mb-4">
-                        <div>
-                            <h3 class="font-bold text-lg"> Distributed Real-Time Risk Engine for Crypto Derivatives</h3>
-                            <p class="text-purple-600">2025</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700">
-                        Built a real-time risk engine in Rust to compute PnL, exposure, and liquidation metrics for high-frequency crypto derivatives trading. to compute PnL, exposure, and liquidation metrics for high-frequency crypto derivatives trading
-                    </p>
-                    <div class="mt-4 flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">FinTech</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Latency Processing</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Rust</span>
-                    </div>
-                    <div class="mt-4">
-                        <a href="https://github.com/Rhea-Shah23/CryptoRiskEngine" target="_blank" class="text-purple-600 hover:text-purple-800 transition">
-                            <img src="github.png" alt="GitHub Project" class="w-6 h-6 inline" />
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Experience Item 5 -->
-                <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 shadow-md hover:shadow-xl transition">
-                    <div class="flex items-center mb-4">
-                        <div>
-                            <h3 class="font-bold text-lg"> Current: High-Frequency Trading in a Latency Constrained Agent Arena </h3>
-                            <p class="text-purple-600">2025</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700">
-                        Simulates a realistic high-frequency trading enviornment where autonomous agents (rule-based, reinforcement learning drive, or hybrid) compete in a latency-sensitive order book. This simulation aims to explore emergent behaviors, offerring a platofrm to study real-wrold market microstructure. 
-                    </p>
-                    <div class="mt-4 flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">FinTech</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">AgenticAI</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Systems</span>
-                    </div>
-                    <div class="mt-4">
-                        <a href="https://github.com/Rhea-Shah23/HFT-Arena" target="_blank" class="text-purple-600 hover:text-purple-800 transition">
-                            <img src="github.png" alt="GitHub Project" class="w-6 h-6 inline" />
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Experience Item 6 -->
-                 <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 shadow-md hover:shadow-xl transition">
-                    <div class="flex items-center mb-4">
-                        <div>
-                            <h3 class="font-bold text-lg">Computation Immunology Intern</h3>
-                            <p class="text-purple-600">Northwestern University • 2023</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700">
-                        Preprocessed and visualized single-cell RNA sequence data in R to identify biomarkers for early diagnosis of GERD and systemic sclerosis. Trained and optimized ML models (SVMs, CNN, Random Forest, Logistic Regression) on high-dimensional biomedical data. 
-                    </p>
-                    <div class="mt-4 flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">R</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">High-Dimensional Data</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Feature Engineering</span>
-                    </div>
-                </div>
-                
+                In my free time, I love spending time outdoors either by hiking, travelling, or just sitting outside. Fun fact: I've summitted mt. kilimanjaro! I also love fitness and just finished my first triathlon! To learn more about my life check out some <a href="photos.html">photos</a> and/or my <a href="rheatshah.substack.com">substack</a> <br><br>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 shadow-md">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16">
-                Let's <span class="gradient-text">Connect</span>
-            </h2>
-            
-            <div class="max-w-3xl mx-auto bg-white p-8 rounded-2xl shadow">
-                <form class="space-y-6">
-                    <div>
-                        <label for="name" class="block mb-2 font-medium">Name</label>
-                        <input type="text" id="name" class="w-full px-4 py-3 bg-white bg-opacity-10 border border-gray border-opacity-20 rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50" placeholder="Your name">
+        <section>
+            <div class="section-title">//work experience</div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-date">September 2025 - Present</div>
+                    <div class="job-title">
+                        <span class="company">John Deere</span> <span class="role">//machine learning engineer</span>
                     </div>
-                    <div>
-                        <label for="email" class="block mb-2 font-medium">Email</label>
-                        <input type="email" id="email" class="w-full px-4 py-3 bg-white bg-opacity-10 border border-gray border-opacity-20 rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50" placeholder="your.email@example.com">
-                    </div>
-                    <div>
-                        <label for="subject" class="block mb-2 font-medium">Subject</label>
-                        <input type="text" id="subject" class="w-full px-4 py-3 bg-white bg-opacity-10 border border-gray border-opacity-20 rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50" placeholder="What's this about?">
-                    </div>
-                    <div>
-                        <label for="message" class="block mb-2 font-medium">Message</label>
-                        <textarea id="message" rows="4" class="w-full px-4 py-3 bg-white bg-opacity-10 border border-gray border-opacity-20 rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50" placeholder="Your message..."></textarea>
-                    </div>
-                    <button type="submit" class="w-full px-6 py-3 bg-gray text-purple-600 font-bold rounded-lg hover:bg-gray-100 transition">
-                        Send Message
-                    </button>
-                </form>
+                </div>
+                <ul class="job-description">
+                    <li> Developed an end-to-end machine learning system working towards the goal of autonomous combines.</li>
+                    <li> Built reinforcement learning agents to optimize harvesting operations, incorporating computer vision and
+sensor fusion to navigate complex field conditions autonomously.</li>
+                    <li> Implemented novel deep learning anomaly detection systems.</li>
+                    <li> Translated complex analytical findings into professional reports and presentations, communicating technical
+insights to key stakeholders to inform business decisions</li>
+                </ul>
+                <div class="tech-stack">transformer / reinforcement learning / deep learning / computer vision</div>
             </div>
-        </div>
-    </section>
 
-    <!-- JavaScript for Spline and animations -->
-    <script>
-            
-            // Smooth scroll for navigation
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 100,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-            
-            // Mobile menu toggle would go here
-    </script>
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-date">August 2024 - June 2025</div>
+                    <div class="job-title">
+                        <span class="company">MIT Lincoln Lab</span> <span class="role">//computer vision intern</span>
+                    </div>
+                </div>
+                <ul class="job-description">
+                    <li> Engineered a deep learning pipeline to classify 3D printing failures using a curated 10K-image subset of the CAXTON dataset. </li>
+                    <li> Benchmarked ResNet, ViT, and Swin Models with ResNet50 achieving 89% accuracy; used feature extraction to cut model size by 99.9%. </li>
+                    <li> Resolved data quality issues and conducted model analysis to inform autonomous defect detection in additive manufacturing. </li>
+                </ul>
+                <div class="tech-stack">transformer / computer vision / big data / anomaly detection</div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-date">May 2024 - May 2025</div>
+                    <div class="job-title">
+                        <span class="company">MIT Lincoln Lab</span> <span class="role">//natural language processing intern</span>
+                    </div>
+                </div>
+                <ul class="job-description">
+                    <li> Fine-tuned BERT and integrated SVMs using PyTorch and Hugging Face to build a robust fake news classifier</li>
+                    <lit> Benchmarked CNNs, RNNs, and transformers to optimize performance and generalize misinformation detection across sources</lit>
+                    <li> Strengthened skills in Python, scikit-learn, PyTorch, and Hugging Face Transformers through iterative model development</li>
+                </ul>
+                <div class="tech-stack"> hugging face / natural language processing / bert </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-title">//projects</div>
+            <div class="projects-grid">
+                <div class="project-row">
+                    <div class="project-name"><a href="https://github.com/Rhea-Shah23/DiabeticRetinopathyResearch" target="_blank">Advancing Diabetic Retinopathy Diagnosis: Deep Learning Approach Using Vision Transformers</a></div>
+                    <div class="project-tag">NeurIPS2024</div>
+                    <div class="project-tag">Computer Vision</div>
+                    <div class="project-tag">Medical Technology</div>
+                </div>
+                <div class="project-row">
+                    <div class="project-name"><a href="https://github.com/Rhea-Shah23/CryptoRiskEngine" target="_blank">Distributed Real-Time Risk Engine for Crypto Derivatives</a></div>
+                    <div class="project-tag">End-to-End</div>
+                    <div class="project-tag">Quant Finance</div>
+                    <div class="project-tag">2025</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-title">//communities</div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-date">august 2025 - present</div>
+                    <div class="job-title">
+                        <span class="company">BuildIllinois</span> <span class="role">//executive member</span>
+                    </div>
+                </div>
+                <ul class="job-description">
+                    <li> Built a thriving entrepreneurial ecosystem at UIUC, organizing hackathons, summits, and retreats that connected 1,000+ students with investors and founders from Y Combinator, Sequoia, and Google </li>
+                    <li> Facilitated partnerships with leading VCs and tech companies, securing $120k+ in prizes and creating fast-track opportunities to accelerators for student builders </li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-date">august 2025 - present</div>
+                    <div class="job-title">
+                        <span class="company">Women in Computer Science</span> <span class="role">//workshops committee developer</span>
+                    </div>
+                </div>
+                <ul class="job-description">
+                    <li> Designed and deveoped machine learning and computing workshops for college and high school students, consistently engaging audiences with 30+ students</li>
+                    <li> Created accessible educational content that introduced underrepresented populations to computing topics fostering interest in computer science</li>
+                    <li> Built a welcoming learning enviornment that helps bridge the gender gap in technology education</li>
+                </ul>
+            </div>
+        </section>
+
+        
+    </div>
 </body>
 </html>
